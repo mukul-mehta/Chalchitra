@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,MAAM,MAAM,MAAM,MAAM,SAAS,EAAE,KAAK;EACtC,wBAAwB;EACxB,AAAA,GAAG,CAAC;IACF,KAAK,EAAE,cAAc;IACrB,aAAa,EAAE,GAAG;GACnB;EACD,AAAA,WAAW,CAAC;IACV,UAAU,EAAE,IAAI;IAChB,WAAW,EAAE,GAAG;GACjB;EACD,AAAA,KAAK,CAAC;IACJ,SAAS,EAAE,IAAI;GAChB;EACD,AAAA,KAAK,CAAC;IACJ,SAAS,EAAE,IAAI;GAChB",
+    "sources": [
+        "SectionCarousel.scss"
+    ],
+    "names": [],
+    "file": "SectionCarousel.css"
+}

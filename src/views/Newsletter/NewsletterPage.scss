@@ -1,0 +1,51 @@
+.newsletter {
+    position: absolute;
+    display: block;
+    top: 8%;
+    left: 50vw;
+    transform: translateX(-50%);
+    z-index: 999;
+}
+
+
+@media only screen and (max-width: 1106px) and (min-width: 890px) {
+    /* For mobile phones: */
+
+    .newsletter {
+       left: 45vw;
+    }
+}
+
+@media only screen and (max-width: 889px) and (min-width: 769px) {
+    /* For mobile phones: */
+
+    .newsletter {
+       left: 42vw;
+    }
+}
+
+@media only screen and (max-width: 770px) and (min-width: 685px) {
+    /* For mobile phones: */
+
+    .newsletter {
+       left: 38vw;
+    }
+}
+
+@media only screen and (max-width: 684px) and (min-width: 481px) {
+    /* For mobile phones: */
+
+    .newsletter {
+       left: 35vw;
+    }
+}
+
+
+
+@media only screen and (max-width: 480px) {
+    /* For mobile phones: */
+
+    .newsletter {
+       left: 50vw;
+    }
+}

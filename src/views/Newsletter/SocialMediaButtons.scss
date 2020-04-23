@@ -1,0 +1,42 @@
+#mySidenav {
+    text-align: left;
+}
+
+#mySidenav a {
+    position: relative;
+    margin-top: 15%;
+    transition: 0.3s;
+    padding-top: 15px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    width: 40px;
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+  }
+
+  #mySidenav a:hover {
+    right: -1px;
+  }
+
+  /* #fb-share {
+    top: 30px;
+  }
+
+  #twitter-share {
+    top:75px;
+  }
+
+
+  #linkedin-share {
+    top: 150px;
+  } */
+
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    #mySidenav a {
+        margin-top: 55%;
+    }
+
+}

@@ -1,0 +1,55 @@
+@font-face {
+  font-family: MinionPro;
+  src: url('../ReadingPage/MinionPro-Regular.otf');
+}
+
+.issue-data {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.date {
+  color: #666;
+  font-weight: 600;
+  font-size: 1.6em;
+  text-transform: capitalize;
+  margin-right: -5%;
+  font-family: MinionPro;
+}
+
+.download {
+  box-sizing: border-box;
+  color: #eee;
+  background: #0F8797;
+  border-radius: 25px 25px !important;
+  font-weight: 800;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-block;
+  margin-left: -5%;
+  font-family: MinionPro;
+}
+
+.download:hover {
+  background-color: #eef;
+  transition: all 0.5s;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .download {
+    font-size: 1em;
+    margin-left: -5%;
+  }
+
+  .date {
+    font-size: 1.2em;
+    margin-right: -5%;
+  }
+}

@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css?family=Vidaloka&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@font-face {
+  font-family: MinionPro;
+  src: url('../ReadingPage/MinionPro-Regular.otf');
+}
+
+#title {
+ font-family:  "Vidaloka", serif !important;
+
+}
+
+#subtitle {
+  font-family: MinionPro !important;
+  font-size: 1.8em;
+} 
+
+.landing-page {
+  margin-top: 9% !important;
+}
+
+.drone {
+  z-index: 1 !important;
+}
+
+.MuiTouchRipple-root {
+  display: none !important;
+}
+
+
+
+.landing-logo {
+  width: 150px !important;
+}
+
+.landing-cont-custom {
+  padding-right: 32em !important;
+  padding-top: 2em;
+  padding-bottom: 130px;
+}
+
+.landing-subtitle {
+  margin-top: 30px !important;
+  font-size: 1.3em !important;
+  font-weight: 500 !important;
+  color: #767676 !important;
+  margin-bottom: 20px !important;
+}
+
+.landing-subtitle-after {
+  color: #333 !important;
+  font-size: 3.4em !important;
+  margin-top: 100px !important;
+  font-weight: 900 !important;
+}
+
+.landing-subtitle2-after {
+  color: #767676 !important;
+  font-size: 1.2em !important;
+  margin-top: 10px !important;
+  font-weight: 500 !important;
+}
+
+.custom-in {
+  display: inline;
+  width: 180% !important;
+}
+
+.smash-btn {
+  box-shadow: none !important;
+  padding: 0.5em 1.6em !important;
+  font-size: 1.1em !important;
+  display: inline !important;
+  background: #fff !important;
+  border: 1px solid #212121 !important;
+  border-radius: 2px !important;
+  color: #212121 !important;
+  &:hover {
+    background: #eee !important;
+  }
+}
+
+.landing-subcontent {
+  color: #0F8797 !important;
+  font-weight: 900 !important;
+  font-size: 5em !important;
+  z-index: 99 !important;
+  line-height: 1em !important;
+}
+
+.carousel-title {
+  text-align: center;
+  margin-top: 7%;
+  margin-bottom: -4%;
+}
+
+.form {
+  display: flex;
+  input::placeholder {
+    font-family: MinionPro !important;
+  }
+}
+
+.form input[type='text'] {
+  padding: 20px;
+  font-size: 17px;
+  border: 1px solid #ffffff;
+  width: 80%;
+
+  border-radius: 100px 0px 0px 100px;
+  box-shadow: 0 0 2.188em rgba(50, 50, 93, 0.1),
+    0 0.313em 0.938em rgba(0, 0, 0, 0.07);
+}
+
+.tryIt {
+  color: white;
+  background-color: rgb(28, 127, 242);
+  border-radius: 0 100px 100px 0;
+  padding: 0px 25px;
+  font-size: 20px;
+  transition: .2s;
+  font-family: MinionPro !important;
+}
+
+.tryIt:hover {
+  background-color: rgb(28, 127, 242);
+  border-radius: 100px;
+  padding: 15px 40px;
+  transform: scale(1.1);
+}
+
+.form button {
+  padding: 20px;
+  // width: 20%;
+  width: max-content;
+  background: #0F8797;
+  color: white;
+  font-size: 17px;
+  border: 1px solid #fff;
+  border-left: none;
+  cursor: pointer;
+  border-radius: 0 100px 100px 0;
+}
+input:focus {
+  outline: none;
+}
+
+.form button:hover {
+  background: #0b7dda;
+}
+
+.form::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+@media only screen and (min-width: 768px) {
+  .drone-sub {
+    position: relative;
+    right: 6%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .landing-subcontent {
+    font-size: 3.5em !important;
+    z-index: 99 !important;
+    line-height: 1em !important;
+    text-align: left;
+  }
+  .landing-cont-custom {
+    padding-right: 3em !important;
+    margin-top: -2.5em;
+  }
+
+  .landing-subtitle {
+    text-align: justify;
+    padding: 0.5em 0;
+  }
+  .custom-in {
+    display: inline;
+    width: 140% !important;
+  }
+  .drone {
+    display: none;
+  }
+  .carousel-title {
+    margin-bottom: -15%;
+  }
+  .landing-page {
+    margin-top: 30% !important;
+  }
+  .form input {
+    width: auto !important;
+  }
+  .form button {
+    width: max-content;
+  }
+}

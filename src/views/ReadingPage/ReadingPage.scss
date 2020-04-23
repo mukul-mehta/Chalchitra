@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css?family=Vidaloka&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+.reading-page {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+  min-width: 50%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  .image {
+    width: 900px;
+    height: 900px;
+    padding: 40px 0px;
+  }
+
+  .article-date {
+    color: #318897;
+    font-family: "Open Sans", sans-serif !important;
+    font-weight: 900;
+    //text-align: center;
+    font-size: 1.24em;
+    padding-bottom: 10px;
+  }
+
+  .article-author {
+    color: #a9a9a9;
+    font-family: "Open Sans", sans-serif !important;
+    font-weight: 600;
+    //text-align: center;
+    font-size: 1.25em;
+  }
+
+  .article-title {
+    //text-align: center;
+    font-family: "Vidaloka", serif !important;
+    font-size: 2.2em;
+  }
+
+  .article-content {
+    line-height: 200%;
+    font-size: 150%;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .sub {
+    padding: 10px 0px;
+    line-height: 150%;
+    font-weight: 700;
+    font-size: 120%;
+  }
+  .text {
+    padding: 10px 0px;
+    line-height: 165%;
+    font-size: 150%;
+  }
+  .article-tags {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  .tags {
+    background-color: rgb(228, 228, 228);
+    padding: 8px;
+    margin-right: 10px;
+    font-size: medium;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .reading-page {
+    padding-top: 30px;
+    min-width: 85%;
+    .article-title {
+      font-size: 200%;
+    }
+    .sub {
+      font-size: 96%;
+    }
+    .text {
+      font-size: 138%;
+    }
+    .tags {
+      padding: 1px 3px 1px 3px;
+      margin-right: 5px;
+      font-size: x-small;
+      border-radius: 0px;
+    }
+    .image {
+      width: 85vw !important ;
+      height: 95vw !important;
+    }
+  }
+}
