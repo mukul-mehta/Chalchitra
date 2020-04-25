@@ -7,7 +7,7 @@ import AppBarButton from "react-uwp/AppBarButton";
 export default class Search extends React.Component {
 
   componentDidMount(){
-    document.title = `Search - DYSTuss`;
+    document.title = `Search - Chalchitra`;
   }
 
   static contextTypes = { theme: PropTypes.object };
@@ -53,7 +53,7 @@ export default class Search extends React.Component {
       { id: 9, title: "Ben-Hur versus Titanic: The tale of the 11 oscars", author: 'Pratim Majumdar', commentcount: 25, appeal: 321 },
       { id: 1, title: '[Review] Parasite (2019)', author: 'Kanishka Gandhi', commentcount: 3, appeal: -9 },
       { id: 6, title: "Omar Sharif : From Zenith to Nadir", author: 'Pratim Majumdar', commentcount: 25, appeal: 321 },
-      { id: 2, title: "Schindler's List - After 25 Years", author: 'Rashil Gandhi', commentcount: 5, appeal: 20 }
+      { id: 2, title: "Schindler's List - After 25 Years", author: 'Mukul Mehta', commentcount: 5, appeal: 20 }
     ];
 
     return (

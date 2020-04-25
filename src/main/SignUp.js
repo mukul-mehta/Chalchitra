@@ -35,7 +35,7 @@ export default class SignUp extends React.Component {
     else {
       const axiosOptions = {
         'method': 'POST',
-        'url': 'http://minerva.rashil2000.me/auth/signup', //TODO: Change URL
+        'url': 'http://minerva.metamehta.me/auth/signup', //TODO: Change URL
         'data': {
           'email': this.state.email,
           'username': this.state.username,
@@ -67,7 +67,7 @@ export default class SignUp extends React.Component {
   }
 
   componentDidMount() {
-    document.title = "Sign Up - DYSTuss"
+    document.title = "Sign Up - Chalchitra"
   }
 
   static contextTypes = { theme: PropTypes.object };

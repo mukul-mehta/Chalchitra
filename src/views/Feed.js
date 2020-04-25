@@ -17,7 +17,7 @@ export default class Feed extends React.Component {
   }
 
   getData() {
-    let url = 'http://minerva.rashil2000.me/post/getAll';
+    let url = 'http://minerva.metamehta.me/post/getAll';
     const axiosOptions = {
       'method': 'GET',
       'url': url
@@ -33,7 +33,7 @@ export default class Feed extends React.Component {
   }
 
   componentDidMount() {
-    document.title = "DYSTuss";
+    document.title = "Chalchitra";
     this.getData();
   }
 
@@ -69,7 +69,7 @@ export default class Feed extends React.Component {
       <div className="content">
         <div {...classes.acrylic40} style={{ boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' }}>
           <p style={{ fontSize: 30, textAlign: 'left', width: '49%', display: 'inline-block' }}>Feed</p>
-          <p style={{ fontSize: 15, textAlign: 'right', width: '50%', display: 'inline-block' }}>DYSTuss's Homepage</p>
+          <p style={{ fontSize: 15, textAlign: 'right', width: '50%', display: 'inline-block' }}>Chalchitra's Homepage</p>
         </div>
         <div {...classes.root}>
           {this.state.post_list.map(post => {

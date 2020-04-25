@@ -37,7 +37,7 @@ export default class Movie extends React.Component {
 
   getData(){
     let imdb_id = window.location.pathname.split("/")[2];
-    let url = 'http://minerva.rashil2000.me/movie/' + imdb_id;
+    let url = 'http://minerva.metamehta.me/movie/' + imdb_id;
     const axiosOptions = {
       'method' : 'GET',
       'url' : url
@@ -78,7 +78,7 @@ export default class Movie extends React.Component {
   }
 
   componentWillReceiveProps(){
-    document.title = `Movie - ${this.state.title} - DYSTuss`;
+    document.title = `Movie - ${this.state.title} - Chalchitra`;
   }
 
   handleAddSeen(){
@@ -89,7 +89,7 @@ export default class Movie extends React.Component {
 
       const axiosOptions = {
         'method' : 'POST',
-        'url' : 'http://minerva.rashil2000.me/user/add/seenList',
+        'url' : 'http://minerva.metamehta.me/user/add/seenList',
         headers : {
           'Authorization' : localStorage.getItem("access_token")
         },
@@ -118,7 +118,7 @@ export default class Movie extends React.Component {
 
       const axiosOptions = {
         'method' : 'POST',
-        'url' : 'http://minerva.rashil2000.me/user/add/bucketList',
+        'url' : 'http://minerva.metamehta.me/user/add/bucketList',
         headers : {
           'Authorization' : localStorage.getItem("access_token")
         },

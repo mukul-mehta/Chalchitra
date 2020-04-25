@@ -27,7 +27,7 @@ export default class CreatePost extends React.Component {
     else {
       const axiosOptions = {
         'method': 'POST',
-        'url': 'http://minerva.rashil2000.me/post/create', //TODO: Change URL
+        'url': 'http://minerva.metamehta.me/post/create', //TODO: Change URL
         'data': {
           'title': this.state.title,
           'body': this.state.content,
@@ -63,7 +63,7 @@ export default class CreatePost extends React.Component {
   }
 
   componentDidMount() {
-    document.title = "Create Post - DYSTuss"
+    document.title = "Create Post - Chalchitra"
   }
 
   static contextTypes = { theme: PropTypes.object };

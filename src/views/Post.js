@@ -36,7 +36,7 @@ export default class Post extends React.Component {
 
   getData() {
     let post_id = window.location.pathname.split("/")[2];
-    let url = 'http://minerva.rashil2000.me/post/' + post_id;
+    let url = 'http://minerva.metamehta.me/post/' + post_id;
     const axiosOptions = {
       'method': 'GET',
       'url': url
@@ -61,7 +61,7 @@ export default class Post extends React.Component {
 
   getComments() {
     let post_id = window.location.pathname.split("/")[2];
-    let url = 'http://minerva.rashil2000.me/post/' + post_id + '/comments';
+    let url = 'http://minerva.metamehta.me/post/' + post_id + '/comments';
     const axiosOptions = {
       'method': 'GET',
       'url': url
@@ -80,7 +80,7 @@ export default class Post extends React.Component {
     let post_id = window.location.pathname.split("/")[2];
     const axiosOptions = {
       'method' : 'POST',
-      'url' : 'http://minerva.rashil2000.me/post/' + post_id + '/upvote',
+      'url' : 'http://minerva.metamehta.me/post/' + post_id + '/upvote',
       'headers' : {
         'Authorization' : localStorage.getItem("access_token")
       }
@@ -209,7 +209,7 @@ export default class Post extends React.Component {
   }
 
   componentWillReceiveProps(){
-    document.title = `${this.state.title} - DYSTuss`;
+    document.title = `${this.state.title} - Chalchitra`;
   }
 
   static contextTypes = { theme: PropTypes.object };

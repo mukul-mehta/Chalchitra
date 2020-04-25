@@ -19,7 +19,7 @@ export default class ForgotPassword extends React.Component {
 
     const axiosOptions = {
       'method' : 'POST',
-      'url' : 'http://minerva.rashil2000.me/auth/reset/request',
+      'url' : 'http://minerva.metamehta.me/auth/reset/request',
       'data' : {
         'email' : this.state.email,
       }
@@ -45,7 +45,7 @@ export default class ForgotPassword extends React.Component {
   }
 
   componentDidMount() {
-    document.title = "Forgot Password - DYSTuss"
+    document.title = "Forgot Password - Chalchitra"
   }
 
   static contextTypes = { theme: PropTypes.object };

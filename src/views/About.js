@@ -8,7 +8,7 @@ import AppBarButton from "react-uwp/AppBarButton";
 export default class About extends React.Component {
 
   componentDidMount() {
-    document.title = "About - DYSTuss"
+    document.title = "About - Chalchitra"
   }
 
   static contextTypes = { theme: PropTypes.object };
@@ -51,11 +51,11 @@ export default class About extends React.Component {
         <div {...classes.acrylic40} style={{ boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' }}>
           <p style={{ fontSize: 30, float: "left" }}>About</p>
           <p style={{ fontSize: 15, float: "right" }}>
-            <a href="https://rashil2000.me" target="__blank">
+            <a href="https://metamehta.me" target="__blank">
               <AppBarButton
                 style={buttonStyle}
                 icon={<span className="sdl2asset">&#xF25F;</span>}
-                label="rashil2000.me"
+                label="metamehta.me"
                 labelPosition="right"
               />
             </a>
@@ -114,16 +114,16 @@ export default class About extends React.Component {
         </div>
         <div {...classes.acrylic60} style={{ fontSize: 18, boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)', marginTop: "20px" }}>
           <div className="about">
-            <p>If you're still wondering, DYSTuss, pronounced like “discuss” but with ‘t’ instead of ‘c’, literally stands for Did You See This - discuss.</p>
-            <p>DYSTuss creates a space for people to freely and anonymously discuss their ideas and thoughts about movies, shows and series, along with giving them the ability to maintain user profiles to keep track of what they have seen, what they wish to see, and get recommendations, both from the community and the ML-trained models.</p>
+            <p>Chalchitra literally means movie in Sanskrit (or Moving picture literally)</p>
+            <p>Chalchitra creates a space for people to freely and anonymously discuss their ideas and thoughts about movies, shows and series, along with giving them the ability to maintain user profiles to keep track of what they have seen, what they wish to see, and get recommendations, both from the community and the ML-trained models.</p>
             <br /><hr /><br />
-            <p>DYSTuss was created as a part of the Software Engineering Laboratory (CS29006), a second year undergraduate course offered in the spring semester at the <HyperLink style={linkStyle} href="http://iitkgp.ac.in/" target="__blank">Indian Institute of Technology Kharagpur</HyperLink>.</p>
+            <p>This was created as a part of the Software Engineering Laboratory (CS29006), a second year undergraduate course offered in the spring semester at the <HyperLink style={linkStyle} href="http://iitkgp.ac.in/" target="__blank">Indian Institute of Technology Kharagpur</HyperLink>.</p>
             <p>The website implements the Fluent Design language and Fabric UI assets using React. On the back it is powered by Flask-RESTPlus API.</p>
-            <p>The source code can be seen in the GitHub <HyperLink style={linkStyle} href="https://github.com/rashil2000/dystuss" target="__blank">repository</HyperLink>.</p>
+            <p>The source code can be seen in the GitHub <HyperLink style={linkStyle} href="https://github.com/mukul-mehta/chalchitra" target="__blank">repository</HyperLink>.</p>
             <br /><hr /><br />
-            <p>Made with &nbsp;<span className="sdl2asset" style={{ color: "red" }}>&#xEB52;</span>&nbsp; by Rashil Gandhi (18CS30036).</p>
+            <p>Made with &nbsp;<span className="sdl2asset" style={{ color: "red" }}>&#xEB52;</span>&nbsp; by Mukul Mehta (18CS10033).</p>
             <p>To know more, go to my website on the top right.</p>
-            <p>Or check out my <HyperLink style={linkStyle} href="https://github.com/rashil2000" target="__blank">GitHub</HyperLink> page to see some other projects.</p>
+            <p>Or check out my <HyperLink style={linkStyle} href="https://github.com/mukul-mehta" target="__blank">GitHub</HyperLink> page to see some other projects.</p>
           </div>
         </div>
       </div>
