@@ -43,9 +43,9 @@ export default class App extends React.Component {
         backimg = "/assets/evening.jpg";
         break;
       default:
-        name = "dark";
-        color = "#afbda6";
-        backimg = "/assets/night.jpg";
+        name = "light";
+        color = "#3c6e8f";
+        backimg = "/assets/morning.jpg";
     }
 
     return (
