@@ -1,117 +1,73 @@
-# Apsara2.0
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Second version of iit-techambit frontend.
+### `npm install`
 
-# Set up:
+You need Node.js to install the scripts and run this app.<br />
+Go to [nodejs.org](https://nodejs.org/en/download/) to install it.
 
-#### Installation
+## Available Scripts
 
-`npm install`
+In the project directory, you can run:
 
-#### Running on localhost
+### `npm start`
 
-`npm start`
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-**NOTE: Please use only npm as package manager not any other to avoid dependency clashes**
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-# To Contribute
+### `npm test`
 
-- We do not commit to `master` branch directly. We open pull requests and merge them in master after review.
-- Create the issue as necessary.
-- If you lack the technical knowhow, feel free ask in the slack workspace.
-- Create a Branch and Commit your changes.
-  - Name the branch carefully. For example `feature-card-component`, `bugfix-overlay`. Do not use generic names such as `develop`, `work`, your username etc.
-  - Name the commits meaningfully. For help read [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/).
-- Check if the solution works by testing it locally.
-- Submit a PR with an appropriate name including the term `Fixes #{issue number}` if it fixes that particular issue.
-- Be attentive and respond to comments and suggestions in the opened PR.
-- We will merge your PR after reviewing and testing it.
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-# While contributing
+### `npm run build`
 
-- Use **prettier** extension for code linting
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## Deployment
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-Note that the `master` branch is deployed to server through [Midgard](https://midgard.iit-techambit.in). Any commits pushed to `master` will be deployed to server instantly
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-A manual deployment can be triggered by going to the midgard dashboard.
+### `npm run eject`
 
-## Documentation
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-The documentation for the Material Kit React is hosted at our [website](https://demos.creative-tim.com/material-kit-react/#/documentation/tutorial).
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-## Configuration - Settings.json in VS Code
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-```json
-{
-  "files.trimTrailingWhitespace": true,
-  "editor.formatOnSave": true,
-  "eslint.autoFixOnSave": true,
-  "eslint.alwaysShowStatus": true,
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "prettier.jsxSingleQuote": true,
-  "prettier.singleQuote": true
-}
-```
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-- Use Pascal case naming convention for naming files, variables meaningfully.
-- Usage of ES6 Features when compared to vanilla JS is highly recommended.
+## Learn More
 
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-## Docs - Easy reference to make changes for devs 
-#### Routes 
-All the routes are present in `src/index.js`
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-#### Navbar
-- Navbar is present in `src/views/Components/Navbar.js`
-- And navbar items are present in `src/components/Header/HeaderLinks.js`
+### Code Splitting
 
-#### Landing Page
-- The frontpage is present in `src/views/Components/Components.js`
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-#### Stories
-- `/stories` route
-- The component that is rendered in the page is `src/views/Archive/Archive.js` which renders Article cards.Here only data is being fetched from the Drupal CMS API
-- Each Article card is present is present in `src/views/Archive/ArticleCard.js`
-- On clicking on each card, leads to ReadingPage of each article which is the component `src/views/ReadingPage/ReadingPage.js`,Here also the data is fetched from Drupal CMS API
+### Analyzing the Bundle Size
 
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-#### Archive
-- `/archive` route
-- The component that is rendered is in the page `src/views/Stories/Stories.js` which displays Stories Card(Bad naming) ,this renders from the Flask API. **Fetching from Flask API is done using function `getData` present in `src/integrate.js`  and the endpoints are present in `src/config.js` **
-- Each Story card is present in  `src/views/Stories/StoriesCard.js`
+### Making a Progressive Web App
 
-#### Newsletter
-- `/newsletter` route
-- The component being rendered is in `src/views/Newsletter/Newsletter.js`
-- It fetches the HTML from Flask API using similar manner as described in the `/archive` route in bold. The HTML is rendered using a parser,which is a npm package. Other component is `SubscriptInput` which is the subscribe box present at the right bottom of the page
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-#### Team Page
-- `/team` route
-- The component that is being rendered is in `src/views/Team/Team.js` which displays TeamMemberCard. Each team members details are present in the array named  `TeamList` in `src/views/Team/TeamList.js`
-- The team member card is present in `src/views/TeamMemberCard.js`
+### Advanced Configuration
 
-#### Stylings
-- For stylings we are using `SASS`, Don't worry, just write plain CSS in the `scss` file too. It works perfectly fine
-- Mostly, we have tried naming to be in such a way that the name of the `.js` file and `.scss` file match. Keep up the practice please !
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
+### Deployment
 
-## Licensing
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
-- Copyright 2019 Creative Tim (https://www.creative-tim.com/)
+### `npm run build` fails to minify
 
-- Licensed under MIT (https://github.com/creativetimofficial/material-kit/blob/master/LICENSE.md)
-
-## Useful Links
-
-- [Tutorials](https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w)
-- [Affiliate Program](https://www.creative-tim.com/affiliates/new) (earn money)
-- [Blog Creative Tim](http://blog.creative-tim.com/)
-- [Free Products](https://www.creative-tim.com/bootstrap-themes/free) from Creative Tim
-- [Premium Products](https://www.creative-tim.com/bootstrap-themes/premium) from Creative Tim
-- [React Products](https://www.creative-tim.com/bootstrap-themes/react-themes) from Creative Tim
-- [Angular Products](https://www.creative-tim.com/bootstrap-themes/angular-themes) from Creative Tim
-- [VueJS Products](https://www.creative-tim.com/bootstrap-themes/vuejs-themes) from Creative Tim
-- [More products](https://www.creative-tim.com/bootstrap-themes) from Creative Tim
-- Check our Bundles [here](https://www.creative-tim.com/bundles?ref="mk-github-readme")
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
