@@ -34,6 +34,10 @@ export default class Post extends React.Component {
     this.handleCommentDownvote = this.handleCommentDownvote.bind(this);
   }
 
+  isLoggedIn() {
+    return localStorage.getItem("access_token")!==null && localStorage.getItem("access_token")!=="undefined";
+  }
+
   getData() {
     let post_id = window.location.pathname.split("/")[2];
     let url = 'http://minerva.metamehta.me/post/' + post_id;
@@ -77,6 +81,12 @@ export default class Post extends React.Component {
   }
 
   handlePostUpvote(){
+
+    let auth = this.isLoggedIn();
+    if (!auth){
+      window.location.pathname = "/signin"
+    }
+
     let post_id = window.location.pathname.split("/")[2];
     const axiosOptions = {
       'method' : 'POST',
@@ -103,6 +113,11 @@ export default class Post extends React.Component {
   }
 
   handlePostDownvote(){
+    let auth = this.isLoggedIn();
+    if (!auth){
+      window.location.pathname = "/signin"
+    }
+
     let post_id = window.location.pathname.split("/")[2];
     const axiosOptions = {
       'method' : 'POST',
@@ -128,6 +143,11 @@ export default class Post extends React.Component {
   }
 
   handleCreateComment(){
+    let auth = this.isLoggedIn();
+    if (!auth){
+      window.location.pathname = "/signin"
+    }
+
     let post_id = window.location.pathname.split("/")[2];
     const axiosOptions = {
       'method' : 'POST',
@@ -154,6 +174,12 @@ export default class Post extends React.Component {
   }
 
   handleCommentUpvote(value){
+
+    let auth = this.isLoggedIn();
+    if (!auth){
+      window.location.pathname = "/signin"
+    }
+
     console.log(value);
     const axiosOptions = {
       'method' : 'POST',
@@ -179,6 +205,11 @@ export default class Post extends React.Component {
   }
 
   handleCommentDownvote(value){
+    let auth = this.isLoggedIn();
+    if (!auth){
+      window.location.pathname = "/signin"
+    }
+
     const axiosOptions = {
       'method' : 'POST',
       'url' : 'http://minerva.metamehta.me/comment' + value + '/downvote',

@@ -6,7 +6,7 @@ import axios from 'axios'
 import AppBarButton from "react-uwp/AppBarButton";
 
 
-export default class User extends React.Component {
+export default class Profile extends React.Component {
 
   constructor(props) {
     super(props);
@@ -127,7 +127,7 @@ export default class User extends React.Component {
   }
 
   getPostList() {
-    let username = localStorage.getItem("username");
+    let username = window.location.pathname.split("/")[2];
     let url = 'http://minerva.metamehta.me/user/' + username + '/posts';
     const axiosOptions = {
       'method': 'GET',
@@ -210,13 +210,13 @@ export default class User extends React.Component {
         <div {...classes.acrylic40} style={{ boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)' }}>
           <p style={{ fontSize: 30, float: "left" }}>Profile</p>
           <p style={{ fontSize: 15, float: "right" }}>
-            <AppBarButton
+            {/* <AppBarButton
               style={buttonStyle}
               icon={<span className="sdl2asset">&#xF3B1;</span>}
               label="Sign Out"
               labelPosition="right"
               onClick={this.handleLogOut}
-            />
+            /> */}
           </p>
           <div style={{ clear: "both" }}></div>
         </div>
