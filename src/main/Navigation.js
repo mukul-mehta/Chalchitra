@@ -43,7 +43,7 @@ class Navigation extends React.Component {
         isControlled={resp}
         defaultExpanded={resp}
         style={baseStyle}
-        pageTitle={<span style={{ color: theme.accent }}>Chalchitra</span>}
+        pageTitle={<span style={{ color: theme.accent }}>DYSTuss</span>}
         displayMode="overlay"
         autoResize={false}
         background={theme.listLow}

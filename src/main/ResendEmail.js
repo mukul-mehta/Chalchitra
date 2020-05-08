@@ -19,7 +19,7 @@ export default class ResendEmail extends React.Component {
 
     const axiosOptions = {
       'method' : 'POST',
-      'url' : 'http://minerva.rashil2000.me/auth/resendVerificationEmail',
+      'url' : 'http://minerva.metamehta.me/auth/resendVerificationEmail',
       'data' : {
         'email' : this.state.email,
       }
@@ -45,7 +45,7 @@ export default class ResendEmail extends React.Component {
   }
 
   componentDidMount() {
-    document.title = "Resend Email - DYSTuss"
+    document.title = "Resend Email - Chalchitra"
   }
 
   static contextTypes = { theme: PropTypes.object };

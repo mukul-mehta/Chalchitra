@@ -34,13 +34,9 @@ export default class Post extends React.Component {
     this.handleCommentDownvote = this.handleCommentDownvote.bind(this);
   }
 
-  isLoggedIn() {
-    return localStorage.getItem("access_token")!==null && localStorage.getItem("access_token")!=="undefined";
-  }
-
   getData() {
     let post_id = window.location.pathname.split("/")[2];
-    let url = 'http://minerva.metamehta.me/post/' + post_id;
+    let url = 'https://minerva.metamehta.me/post/' + post_id;
     const axiosOptions = {
       'method': 'GET',
       'url': url
@@ -51,7 +47,7 @@ export default class Post extends React.Component {
         this.setState({
           post_id: response.data.id,
           title: response.data.title,
-          author: response.data.author,
+          author: response.data.author_username,
           author_id: response.data.author_id,
           body: response.data.body,
           post_movie: response.data.post_movie,
@@ -65,7 +61,7 @@ export default class Post extends React.Component {
 
   getComments() {
     let post_id = window.location.pathname.split("/")[2];
-    let url = 'http://minerva.metamehta.me/post/' + post_id + '/comments';
+    let url = 'https://minerva.metamehta.me/post/' + post_id + '/comments';
     const axiosOptions = {
       'method': 'GET',
       'url': url
@@ -81,16 +77,10 @@ export default class Post extends React.Component {
   }
 
   handlePostUpvote(){
-
-    let auth = this.isLoggedIn();
-    if (!auth){
-      window.location.pathname = "/signin"
-    }
-
     let post_id = window.location.pathname.split("/")[2];
     const axiosOptions = {
       'method' : 'POST',
-      'url' : 'http://minerva.metamehta.me/post/' + post_id + '/upvote',
+      'url' : 'https://minerva.metamehta.me/post/' + post_id + '/upvote',
       'headers' : {
         'Authorization' : localStorage.getItem("access_token")
       }
@@ -99,7 +89,7 @@ export default class Post extends React.Component {
     axios(axiosOptions)
     .then(response => {
       this.setState({
-        appeal : this.state.appeal + 1 
+        appeal : this.state.appeal + 1
       });
 
     })
@@ -113,15 +103,10 @@ export default class Post extends React.Component {
   }
 
   handlePostDownvote(){
-    let auth = this.isLoggedIn();
-    if (!auth){
-      window.location.pathname = "/signin"
-    }
-
     let post_id = window.location.pathname.split("/")[2];
     const axiosOptions = {
       'method' : 'POST',
-      'url' : 'http://minerva.metamehta.me/post' + post_id + '/downvote',
+      'url' : 'https://minerva.metamehta.me/post' + post_id + '/downvote',
       'headers' : {
         'Authorization' : localStorage.getItem("access_token")
       }
@@ -130,7 +115,7 @@ export default class Post extends React.Component {
     axios(axiosOptions)
     .then(response => {
       this.setState({
-        appeal : this.state.appeal - 1   
+        appeal : this.state.appeal - 1
       });
 
     })
@@ -143,15 +128,10 @@ export default class Post extends React.Component {
   }
 
   handleCreateComment(){
-    let auth = this.isLoggedIn();
-    if (!auth){
-      window.location.pathname = "/signin"
-    }
-
     let post_id = window.location.pathname.split("/")[2];
     const axiosOptions = {
       'method' : 'POST',
-      'url' : 'http://minerva.metamehta.me/comment/create/' + post_id,
+      'url' : 'https://minerva.metamehta.me/comment/create/' + post_id,
       'headers' : {
         'Authorization' : localStorage.getItem("access_token")
       },
@@ -174,16 +154,10 @@ export default class Post extends React.Component {
   }
 
   handleCommentUpvote(value){
-
-    let auth = this.isLoggedIn();
-    if (!auth){
-      window.location.pathname = "/signin"
-    }
-
     console.log(value);
     const axiosOptions = {
       'method' : 'POST',
-      'url' : 'http://minerva.metamehta.me/post' + value + '/downvote',
+      'url' : 'https://minerva.metamehta.me/post' + value + '/downvote',
       'headers' : {
         'Authorization' : localStorage.getItem("access_token")
       }
@@ -192,7 +166,7 @@ export default class Post extends React.Component {
     axios(axiosOptions)
     .then(response => {
       this.setState({
-        appeal : this.state.appeal - 1   
+        appeal : this.state.appeal - 1
       });
 
     })
@@ -205,14 +179,9 @@ export default class Post extends React.Component {
   }
 
   handleCommentDownvote(value){
-    let auth = this.isLoggedIn();
-    if (!auth){
-      window.location.pathname = "/signin"
-    }
-
     const axiosOptions = {
       'method' : 'POST',
-      'url' : 'http://minerva.metamehta.me/comment' + value + '/downvote',
+      'url' : 'https://minerva.metamehta.me/comment' + value + '/downvote',
       'headers' : {
         'Authorization' : localStorage.getItem("access_token")
       }
@@ -221,7 +190,7 @@ export default class Post extends React.Component {
     axios(axiosOptions)
     .then(response => {
       this.setState({
-        appeal : this.state.appeal - 1   
+        appeal : this.state.appeal - 1
       });
 
     })
@@ -240,7 +209,7 @@ export default class Post extends React.Component {
   }
 
   componentWillReceiveProps(){
-    document.title = `${this.state.title} - Chalchitra`;
+    document.title = `${this.state.title} - DYSTuss`;
   }
 
   static contextTypes = { theme: PropTypes.object };
@@ -270,10 +239,6 @@ export default class Post extends React.Component {
       acrylic100: { ...itemStyle, ...theme.acrylicTexture100.style }
     };
     const classes = theme.prepareStyles({ styles });
-
-    // const clickComment = () => {
-    //   // TODO: Add function to post comment
-    // }
 
     return (
       <div className="content">
@@ -309,7 +274,8 @@ export default class Post extends React.Component {
         <div {...classes.root}>
           {this.state.comments.map(comment =>
             <div key={comment.id} {...classes.acrylic100} style={{ fontSize: 14, boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)', marginTop: "10px", width: "100%" }}>
-              <p style={{fontSize: 15}}>{comment.author_username}</p>
+              <p style={{ fontSize: 15 }}>{comment.author_username}</p>
+              <br/>
               <p>{comment.body}</p>
               <p style={{ float: "left", paddingTop: "15px" }}><span className="sdl2asset">&#xE3AF;</span>&nbsp; {comment.upvotes - comment.downvotes}</p>
               <p style={{ float: "right" }}>

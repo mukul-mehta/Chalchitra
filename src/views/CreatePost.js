@@ -27,7 +27,7 @@ export default class CreatePost extends React.Component {
     else {
       const axiosOptions = {
         'method': 'POST',
-        'url': 'http://minerva.metamehta.me/post/create', //TODO: Change URL
+        'url': 'https://vidura.rashil2000.me/post/create',
         'data': {
           'title': this.state.title,
           'body': this.state.content,
@@ -63,7 +63,7 @@ export default class CreatePost extends React.Component {
   }
 
   componentDidMount() {
-    document.title = "Create Post - Chalchitra"
+    document.title = "Create Post - DYSTuss"
   }
 
   static contextTypes = { theme: PropTypes.object };
@@ -136,6 +136,8 @@ export default class CreatePost extends React.Component {
               placeholder="Content"
               onChange={e => { this.setState({ content: e.target.value }) }}
             />
+            <span>*This field supports Markdown! Go <a href="https://guides.github.com/features/mastering-markdown/" style={{ color: theme.accent }}>here</a> to know how to use it.</span>
+            <br />
             <br />
             <div style={{ fontSize: 20 }}>If applicable, mention name of movie/show/series: </div>
             <br />
@@ -154,6 +156,7 @@ export default class CreatePost extends React.Component {
               placeholder="Tags"
               onChange={e => { this.setState({ tags: e.target.value }) }}
             />
+            <span>*These tags help people search your post by looking for keywords.</span>
             <br />
             <br />
             <span onClick={this.handleSubmit}>

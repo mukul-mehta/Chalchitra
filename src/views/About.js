@@ -114,12 +114,12 @@ export default class About extends React.Component {
         </div>
         <div {...classes.acrylic60} style={{ fontSize: 18, boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)', marginTop: "20px" }}>
           <div className="about">
-            <p>Chalchitra literally means movie in Sanskrit (or Moving picture literally)</p>
+            <p>Chalchitra literally translates to moving picture in Sanskrit. It's the closest representation I could find to our notion of a movie.</p>
             <p>Chalchitra creates a space for people to freely and anonymously discuss their ideas and thoughts about movies, shows and series, along with giving them the ability to maintain user profiles to keep track of what they have seen, what they wish to see, and get recommendations, both from the community and the ML-trained models.</p>
             <br /><hr /><br />
-            <p>This was created as a part of the Software Engineering Laboratory (CS29006), a second year undergraduate course offered in the spring semester at the <HyperLink style={linkStyle} href="http://iitkgp.ac.in/" target="__blank">Indian Institute of Technology Kharagpur</HyperLink>.</p>
-            <p>The website implements the Fluent Design language and Fabric UI assets using React. On the back it is powered by Flask-RESTPlus API.</p>
-            <p>The source code can be seen in the GitHub <HyperLink style={linkStyle} href="https://github.com/mukul-mehta/chalchitra" target="__blank">repository</HyperLink>.</p>
+            <p>Chalchitra was created as a part of the Software Engineering Laboratory (CS29006), a second year undergraduate course offered in the spring semester at the <HyperLink style={linkStyle} href="http://iitkgp.ac.in/" target="__blank">Indian Institute of Technology Kharagpur</HyperLink>.</p>
+            <p>The website implements the Fluent Design language and Fabric UI assets using React. On the back it is powered by RESTful Flask API.</p>
+            <p>The source code can be seen in the GitHub <HyperLink style={linkStyle} href="https://github.com/mukul-mehta/dystuss" target="__blank">repository</HyperLink>.</p>
             <br /><hr /><br />
             <p>Made with &nbsp;<span className="sdl2asset" style={{ color: "red" }}>&#xEB52;</span>&nbsp; by Mukul Mehta (18CS10033).</p>
             <p>To know more, go to my website on the top right.</p>

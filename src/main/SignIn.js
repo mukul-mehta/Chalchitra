@@ -6,7 +6,7 @@ import axios from 'axios';
 import TextBox from "react-uwp/TextBox";
 import AppBarButton from "react-uwp/AppBarButton";
 import PasswordBox from "react-uwp/PasswordBox";
-import CheckBox from "react-uwp/CheckBox";
+//import CheckBox from "react-uwp/CheckBox";
 
 export default class SignIn extends React.Component {
 
@@ -31,7 +31,7 @@ export default class SignIn extends React.Component {
 
     const axiosOptions = {
       'method' : 'POST',
-      'url' : 'http://minerva.metamehta.me/auth/login', //TODO: Server URL instead of localhost
+      'url' : 'https://vidura.rashil2000.me/auth/login',
       'data' : {
         'username' : this.state.username,
         'password' : this.state.password,
@@ -67,7 +67,7 @@ export default class SignIn extends React.Component {
   }
 
   componentDidMount() {
-    document.title = "Sign In - Chalchitra"
+    document.title = "Sign In - DYSTuss"
   }
 
   static contextTypes = { theme: PropTypes.object };
@@ -80,13 +80,14 @@ export default class SignIn extends React.Component {
       window.location.pathname = "/profile";
     }
 
-
-
     const { theme } = this.context;
+
+    const resp = (window.innerWidth >= 600) ? "400px" : "auto";
 
     const buttonStyle: React.CSSProperties = { background: theme.useFluentDesign ? theme.listLow : theme.chromeLow };
     const textStyle: React.CSSProperties = {
-      margin: "10px auto"
+      margin: "10px auto",
+      width: resp
     };
     const itemStyle: React.CSSProperties = {
       fontWeight: "lighter",
@@ -150,13 +151,13 @@ export default class SignIn extends React.Component {
               onChangeValue={(event) => this.setState({ password: event })}
             />
             <br />
-            <CheckBox
+            {/* <CheckBox
               defaultChecked={false}
               label="Keep me signed in"
               onCheck={(event) => this.setState({remember : 'true'})}
             />
             <br />
-            <br />
+            <br /> */}
             <a href={this.state.errHref}><span>{this.state.errMessage}</span></a>
             <span onClick={this.handleSubmit}>
               <AppBarButton

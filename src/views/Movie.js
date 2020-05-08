@@ -37,7 +37,7 @@ export default class Movie extends React.Component {
 
   getData(){
     let imdb_id = window.location.pathname.split("/")[2];
-    let url = 'http://minerva.metamehta.me/movie/' + imdb_id;
+    let url = 'https://minerva.metamehta.me/movie/' + imdb_id;
     const axiosOptions = {
       'method' : 'GET',
       'url' : url
@@ -89,7 +89,7 @@ export default class Movie extends React.Component {
 
       const axiosOptions = {
         'method' : 'POST',
-        'url' : 'http://minerva.metamehta.me/user/add/seenList',
+        'url' : 'https://minerva.metamehta.me/user/add/seenList',
         headers : {
           'Authorization' : localStorage.getItem("access_token")
         },
@@ -118,7 +118,7 @@ export default class Movie extends React.Component {
 
       const axiosOptions = {
         'method' : 'POST',
-        'url' : 'http://minerva.metamehta.me/user/add/bucketList',
+        'url' : 'https://minerva.metamehta.me/user/add/bucketList',
         headers : {
           'Authorization' : localStorage.getItem("access_token")
         },
